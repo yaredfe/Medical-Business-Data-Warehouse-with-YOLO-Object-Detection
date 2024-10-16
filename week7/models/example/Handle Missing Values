@@ -1,0 +1,15 @@
+-- drop all null valued columns
+
+alter table media
+DROP COLUMN media;
+
+-- replace missing value with its mode
+UPDATE message
+SET text=(select text 
+            from message 
+            where text is not null 
+            group by text 
+            order by count(*) desc 
+            WHERE column_name IS NULL
+            limit 1)
+where text is null;
