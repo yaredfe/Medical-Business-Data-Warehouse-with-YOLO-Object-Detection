@@ -1,2 +1,7 @@
 venv/
 .vscode/
+src/telegram_scraper/__pycache__/
+.env/
+src/telegram_scraper/media/
+logs/
+.dbt/
